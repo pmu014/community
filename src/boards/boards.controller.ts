@@ -25,5 +25,13 @@ export class BoardsController {
         return this.boardsService.deleteBoard(id);
     }
 
+    @Patch('/:id/status')
+    updateBoardStatus(
+        @Param('id', ParseIntPipe) id: number,
+        @Body('status', BoardStatusValidationPipe) status: BoardStatus
+    ) {
+        return this.boardsService.updateBoardStatus(id, status);
+    }
+
    
 }
