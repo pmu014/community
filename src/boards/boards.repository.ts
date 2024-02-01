@@ -23,4 +23,8 @@ export class BoardRepository extends Repository<Board> {
         await this.save(board);
         return board;
     }
+
+    // async deleteBoard(id: number) :Promise<Board>{
+    //     await this.delete()
+    // }
 }
